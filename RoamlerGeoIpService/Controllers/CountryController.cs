@@ -2,7 +2,7 @@
 using System.Web.Http;
 using MaxMind.Db;
 
-namespace RoamlerGeoIpService.Controllers
+namespace SimpleGeoIpService.Controllers
 {
     public class CountryController : ApiController
     {
