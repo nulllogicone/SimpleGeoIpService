@@ -15,13 +15,21 @@ namespace RoamlerGeoIpService.Controllers
 
         private string GetCountryCodeByIp(string ip)
         {
-            var dbPath = HostingEnvironment.MapPath("~/App_Data/GeoLite2-Country.mmdb");
-            using (var reader = new Reader(dbPath))
+            var reader = GetReader();
+            dynamic data = reader.Find(ip);
+            var countryCode = data.country.iso_code;
+            return countryCode;
+        }
+
+        static Reader reader;
+        private static Reader GetReader()
+        {
+            if (reader == null)
             {
-                dynamic data = reader.Find(ip);
-                var countryCode = data.country.iso_code;
-                return countryCode;
+                var dbPath = HostingEnvironment.MapPath("~/App_Data/GeoLite2-Country.mmdb");
+                reader = new Reader(dbPath);
             }
+            return reader;
         }
 
     }
