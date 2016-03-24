@@ -9,7 +9,7 @@ This project was the fastest solution I could think of
 - Copy the free GeoLite2 database from http://dev.maxmind.com/geoip/geoip2/geolite2/
 - Install a NuGet package to read from DB
 - Configure Continuous Integration from Git to Azure
-- done (in less than an hour)
+- done
 
 ## Specification
 
