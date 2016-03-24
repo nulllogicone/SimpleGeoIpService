@@ -12,8 +12,9 @@ This project was the fastest solution I could think of
 - done
 
 ## Specification
-
+```
  GET {yourdomain}/api/country/92.111.21.90
+ ```
  returns just the ISO country code,  nothing else.
  There is also a swagger UI
  
