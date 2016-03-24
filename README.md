@@ -1,4 +1,4 @@
-# Roamler GeoIP Service
+# Simple GeoIP Service
 
 The free webservice http://freegeoip.net/json/ to get a country name for an IP address went down.
 So I needed a quick and easy work around to see where a request comes from.
@@ -13,7 +13,7 @@ This project was the fastest solution I could think of
 
 ## Specification
 
- http://roamlergeoipservice.azurewebsites.net/api/country/92.111.21.90
+ GET {yourdomain}/api/country/92.111.21.90
  returns just the ISO country code,  nothing else.
  There is also a swagger UI
  
