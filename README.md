@@ -24,4 +24,7 @@ This project was the fastest solution I could think of
  - Commit the change and push
  - done
  
- 
+### attribution requirement
+
+This product includes GeoLite2 data created by MaxMind, available from
+<a href="http://www.maxmind.com">http://www.maxmind.com</a>.
