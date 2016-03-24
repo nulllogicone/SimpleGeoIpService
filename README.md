@@ -12,13 +12,15 @@ This project was the fastest solution I could think of
 - done
 
 ## Specification
+
 ```
  GET {yourdomain}/api/country/92.111.21.90
  ```
+
  returns just the ISO country code,  nothing else.
  There is also a swagger UI
  
- ## Update
+## Update the database
  
  - Download DB, unzip file, copy to App_Data folder
  - Commit the change and push
@@ -28,3 +30,8 @@ This project was the fastest solution I could think of
 
 This product includes GeoLite2 data created by MaxMind, available from
 <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+
+### Test live
+
+http://simplegeoipservice.azurewebsites.net/api/country/1.2.3.4
+
