@@ -19,7 +19,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <ApplicationInsightsResourceId>/subscriptions/15c7b24d-833b-49d7-b9ec-0789da42fa36/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/RoamlerGeoIpService</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>
+    </ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

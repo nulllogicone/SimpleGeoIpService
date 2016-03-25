@@ -33,5 +33,7 @@ This product includes GeoLite2 data created by MaxMind, available from
 
 ### Test live
 
+http://simplegeoipservice.azurewebsites.net/swagger/ui/index
+
 http://simplegeoipservice.azurewebsites.net/api/country/1.2.3.4
 
