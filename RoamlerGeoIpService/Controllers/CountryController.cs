@@ -1,4 +1,5 @@
-﻿using System.Web.Hosting;
+﻿using System.Web;
+using System.Web.Hosting;
 using System.Web.Http;
 using MaxMind.Db;
 
@@ -6,6 +7,12 @@ namespace SimpleGeoIpService.Controllers
 {
     public class CountryController : ApiController
     {
+        public string Get()
+        {
+            var ip = HttpContext.Current.Request.UserHostAddress;
+            var countryCode = GetCountryCodeByIp(ip);
+            return countryCode;
+        }
         // GET: api/Country/5
         public string Get(string ip)
         {
@@ -15,6 +22,11 @@ namespace SimpleGeoIpService.Controllers
 
         private string GetCountryCodeByIp(string ip)
         {
+            if (ip == "::1")
+            {
+                return "localhost";
+            }
+            
             var reader = GetReader();
             dynamic data = reader.Find(ip);
             var countryCode = data.country.iso_code;
