@@ -10,7 +10,7 @@ namespace SimpleGeoIpService.Controllers
         public string Get()
         {
             var ip = HttpContext.Current.Request.UserHostAddress;
-            var countryCode = GetCountryCodeByIp(ip);
+            var countryCode = Get(ip);
             return countryCode;
         }
         // GET: api/Country/5
