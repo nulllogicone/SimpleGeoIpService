@@ -11,7 +11,7 @@ This project was the fastest solution I could think of
 - Configure Continuous Integration from Git to Azure
 - done
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://deploy.azure.com/?repository=https://github.com/nulllogicone/SimpleGeoIpService#/form/setup)
 
 ## Specification
 
