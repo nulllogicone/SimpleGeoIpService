@@ -7,12 +7,8 @@ namespace SimpleGeoIpService.Controllers
 {
     public class CountryController : ApiController
     {
-        public string Get()
-        {
-            var ip = HttpContext.Current.Request.UserHostAddress;
-            var countryCode = GetCountryCodeByIp(ip);
-            return countryCode;
-        }
+        public string Get() => Get(HttpContext.Current.Request.UserHostAddress);
+
         // GET: api/Country/5
         public string Get(string ip)
         {
