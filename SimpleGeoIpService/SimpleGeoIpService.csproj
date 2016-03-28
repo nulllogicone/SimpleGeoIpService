@@ -19,8 +19,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <ApplicationInsightsResourceId>
-    </ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/a2051b3b-b598-4b7d-b400-d955d1120484/resourcegroups/SimpleGeoIpService/providers/microsoft.insights/components/SimpleGeoIpService</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
