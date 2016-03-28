@@ -12,13 +12,13 @@ namespace SimpleGeoIpService.Controllers
         // GET: api/Country/5
         public string Get(string ip)
         {
-            var countryCode = GetCountryCodeByIp(ip);
+            var countryCode = SelectCountryCodeByIp(ip);
             return countryCode;
         }
 
-        private string GetCountryCodeByIp(string ip)
+        private static string SelectCountryCodeByIp(string ip)
         {
-            if (ip == "::1")
+            if (ip == "::1" || ip == "127.0.0.1")
             {
                 return "localhost";
             }
@@ -29,15 +29,15 @@ namespace SimpleGeoIpService.Controllers
             return countryCode;
         }
 
-        static Reader reader;
+        private static Reader _reader;
         private static Reader GetReader()
         {
-            if (reader == null)
+            if (_reader == null)
             {
                 var dbPath = HostingEnvironment.MapPath("~/App_Data/GeoLite2-Country.mmdb");
-                reader = new Reader(dbPath);
+                _reader = new Reader(dbPath);
             }
-            return reader;
+            return _reader;
         }
 
     }
